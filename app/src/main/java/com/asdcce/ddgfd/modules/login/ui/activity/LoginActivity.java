@@ -117,10 +117,7 @@ public class LoginActivity extends BaseActivity<LoginActivityPresenter> implemen
                         }
 
                         break;
-
                 }
-
-
                 CommonUtils.hideKeyBoard(this, getWindow().getDecorView().getRootView());
                 startCountdown(mCountAllS);
                 break;
@@ -128,9 +125,9 @@ public class LoginActivity extends BaseActivity<LoginActivityPresenter> implemen
                 if (TextUtils.isEmpty(etPhone.getText().toString().trim())) {
                     ToastUtils.showToast("Mobile phone number does not meet the rules");
                 } else if (TextUtils.isEmpty(etCode.getText().toString().trim())) {
-
                     ToastUtils.showToast("verification code must be filled");
                 } else {
+                    toActivity(PersonInforActivity.class);
                 }
 
 

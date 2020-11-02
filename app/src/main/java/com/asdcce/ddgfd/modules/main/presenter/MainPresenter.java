@@ -70,7 +70,5 @@ public class MainPresenter extends BasePresenter<MainContract.View> implements M
                         Log.e("1111",new Gson().toJson(o));
                     }
                 }));
-
-
     }
 }
