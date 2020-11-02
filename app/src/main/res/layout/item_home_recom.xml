@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="2.5dp"
+    android:layout_marginRight="2.5dp"
+    android:layout_marginTop="6dp"
+    android:layout_height="wrap_content">
+
+    <com.asdcce.ddgfd.widget.RoundImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:corner_radius="10dp"
+        android:src="@drawable/img_default"
+        app:type="round" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/shape_bg_000_10"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="3.5dp"
+        android:paddingTop="1dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="1dp">
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="2dp"
+            android:background="@drawable/shape_bg_round_00ff3f" />
+
+        <TextView
+            android:layout_marginLeft="2dp"
+            style="@style/text_6_fff"
+            android:text="On-line" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_gravity="left|bottom"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="7dp"
+        android:text="Aberdeen"
+        style="@style/text_16_fff" />
+
+</FrameLayout>

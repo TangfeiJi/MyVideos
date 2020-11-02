@@ -1,0 +1,164 @@
+/*
+ *     (C) Copyright 2019, FlySky.
+ *
+ *     Licensed under the Apache License, Version 2.0 (the "License");
+ *     you may not use this file except in compliance with the License.
+ *     You may obtain a copy of the License at
+ *
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *     Unless required by applicable law or agreed to in writing, software
+ *     distributed under the License is distributed on an "AS IS" BASIS,
+ *     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *     See the License for the specific language governing permissions and
+ *     limitations under the License.
+ */
+
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'android-aspectjx'
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    defaultConfig {
+        applicationId "com.find.overseas"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        // Enabling multidex support.
+        multiDexEnabled true
+        resConfigs "id"
+        buildConfigField "String", "CHANNEL_ID", "\"20001\""
+
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('D:/findyou/findoversea.jks')
+            storePassword 'findoversea'
+            keyAlias 'findoversea'
+            keyPassword 'findoversea'
+        }
+
+    }
+
+    buildTypes {
+        release {
+            /* 是否开启代码混淆，默认false */
+            minifyEnabled true
+            /* Zipalign优化 */
+            zipAlignEnabled true
+            /* 是否应该生成可调试的apk */
+            debuggable false
+            /* 移除无用的resource文件 */
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "WanAndroid-V${variant.versionName}-release.apk"
+                }
+            }
+        }
+
+
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+
+//修改生成的apk名字
+
+}
+
+greendao {
+    schemaVersion 1
+    targetGenDir 'src/main/java'
+    daoPackage 'com.asdcce.ddgfd'
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    //base
+
+    implementation rootProject.ext.dependencies["design"]
+
+    //ui
+    implementation rootProject.ext.dependencies["banner"]
+//    implementation rootProject.ext.dependencies["agentweb"]
+    implementation rootProject.ext.dependencies["autosize"]
+    implementation rootProject.ext.dependencies["statusbar"]
+    implementation rootProject.ext.dependencies["multipleStatusView"]
+    implementation rootProject.ext.dependencies["swiperefreshlayout"]
+    //net
+    implementation rootProject.ext.dependencies["okhttp"]
+    implementation rootProject.ext.dependencies["logging-interceptor"]
+//    implementation rootProject.ext.dependencies["logger"]
+    implementation rootProject.ext.dependencies["retrofit"]
+    implementation rootProject.ext.dependencies["converter-gson"]
+    implementation rootProject.ext.dependencies["adapter-rxjava2"]
+
+    implementation rootProject.ext.dependencies["glide"]
+    annotationProcessor rootProject.ext.dependencies["glide_compiler"]
+
+    //dao
+    implementation rootProject.ext.dependencies["greendao"]
+
+    //rx
+    implementation rootProject.ext.dependencies["rxjava"]
+    implementation rootProject.ext.dependencies["rxandroid"]
+
+
+    //di
+    implementation rootProject.ext.dependencies["dagger2"]
+    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+    implementation rootProject.ext.dependencies["dagger2-android"]
+    implementation rootProject.ext.dependencies["dagger2-android-support"]
+    annotationProcessor rootProject.ext.dependencies["dagger2-android-processor"]
+    implementation rootProject.ext.dependencies["javax_annotation"]
+    implementation rootProject.ext.dependencies["butterknife"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+
+    //multidex
+    implementation rootProject.ext.dependencies["multidex"]
+
+    //canary
+    debugImplementation rootProject.ext.dependencies["leakcanary-android"]
+    releaseImplementation rootProject.ext.dependencies["leakcanary-android-no-op"]
+    testImplementation rootProject.ext.dependencies["leakcanary-android-no-op"]
+
+
+
+    //other
+//    implementation rootProject.ext.dependencies["androideventbus"]
+    implementation rootProject.ext.dependencies["eventbus"]
+    implementation rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
+    implementation rootProject.ext.dependencies["fragmentation"]
+    implementation rootProject.ext.dependencies["fragmentation-swipeback"]
+    implementation rootProject.ext.dependencies["ByeBurger"]
+
+
+    implementation rootProject.ext.dependencies["PersistentCookieJar"]
+    implementation rootProject.ext.dependencies["xpopup"]
+
+//    implementation rootProject.ext.dependencies["permissionx"]
+
+    implementation 'com.ninetripods:aop-permission:1.2.0'
+
+
+
+
+}

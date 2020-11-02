@@ -1,0 +1,91 @@
+ext {
+
+    android = [
+            compileSdkVersion    : 29,
+            buildToolsVersion    : "28.0.2",
+            minSdkVersion        : 21,
+            targetSdkVersion     : 29,
+            versionCode          : 101,
+            versionName          : "1.0.1",
+            renderscriptTargetApi: 21
+    ]
+
+    version = [
+            supportLibraryVersion: "28.0.0",
+            okhttpVersion        : "3.9.0",
+            retrofitVersion      : "2.4.0",
+            glideVersion         : "4.9.0",
+            dagger2Version       : "2.17",
+            butterknifeVersion   : "10.2.1",
+            fragmentationVersion : "1.0.2",
+            leakcanaryVersion    : "1.5.4",
+            rxlifecycle2Version  : "2.2.2",
+            espressoVersion      : "3.0.1",
+
+    ]
+
+    dependencies = [
+            //base
+
+            "design"                       : "com.android.support:design:${version["supportLibraryVersion"]}",
+            "constraint-layout"            : "com.android.support.constraint:constraint-layout:1.1.3",
+            //ui
+            "banner"                       : "com.youth.banner:banner:2.0.12",
+            "agentweb"                     : "com.just.agentweb:agentweb:4.0.2",
+            "autosize"                     : "me.jessyan:autosize:1.1.2",
+            "statusbar"                    : "com.gyf.immersionbar:immersionbar:2.3.3",
+            "multipleStatusView"           : "com.classic.common:multiple-status-view:1.6",
+
+            //net
+            "gson"                         : "com.google.code.gson:gson:2.8.2",
+            "okhttp"                       : "com.squareup.okhttp3:okhttp:${version["okhttpVersion"]}",
+            "logging-interceptor"          : "com.squareup.okhttp3:logging-interceptor:${version["okhttpVersion"]}",
+            "retrofit"                     : "com.squareup.retrofit2:retrofit:${version["retrofitVersion"]}",
+            "converter-gson"               : "com.squareup.retrofit2:converter-gson:${version["retrofitVersion"]}",
+            "adapter-rxjava2"              : "com.squareup.retrofit2:adapter-rxjava2:${version["retrofitVersion"]}",
+            "glide"                        : "com.github.bumptech.glide:glide:${version["glideVersion"]}",
+            "glide_compiler"               : "com.github.bumptech.glide:compiler:${version["glideVersion"]}",
+
+            //dao
+            "greendao"                     : "org.greenrobot:greendao:3.2.2",
+
+            //rx
+            "rxjava"                       : "io.reactivex.rxjava2:rxjava:2.1.5",
+            "rxandroid"                    : "io.reactivex.rxjava2:rxandroid:2.0.1",
+            "rxbinding"                    : "com.jakewharton.rxbinding2:rxbinding:2.1.0",
+
+
+            //di
+            "dagger2"                      : "com.google.dagger:dagger:${version["dagger2Version"]}",
+            "dagger2-compiler"             : "com.google.dagger:dagger-compiler:${version["dagger2Version"]}",
+            "dagger2-android"              : "com.google.dagger:dagger-android:${version["dagger2Version"]}",
+            "dagger2-android-support"      : "com.google.dagger:dagger-android-support:${version["dagger2Version"]}",
+            "dagger2-android-processor"    : "com.google.dagger:dagger-android-processor:${version["dagger2Version"]}",
+            "javax_annotation"             : "org.glassfish:javax.annotation:10.0-b28",
+            "butterknife"                  : "com.jakewharton:butterknife:10.2.1",
+            "butterknife-compiler"         : "com.jakewharton:butterknife-compiler:10.2.1",
+
+            //multidex
+            "multidex"                     : "com.android.support:multidex:2.0.1",
+
+            //leakcanary
+            "leakcanary-android"           : "com.squareup.leakcanary:leakcanary-android:${version["leakcanaryVersion"]}",
+            "leakcanary-android-no-op"     : "com.squareup.leakcanary:leakcanary-android-no-op:${version["leakcanaryVersion"]}",
+
+
+            //tools
+            "lottie"                       : "com.airbnb.android:lottie:2.3.0",
+            "BaseRecyclerViewAdapterHelper": "com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4",
+            "fragmentation"                : "me.yokeyword:fragmentationx:${version["fragmentationVersion"]}",
+            "fragmentation-swipeback"      : "me.yokeyword:fragmentationx-swipeback:${version["fragmentationVersion"]}",
+            "logger"                       : "com.orhanobut:logger:2.1.1",
+            "ByeBurger"                    : "com.github.githubwing:ByeBurger:1.2.3",
+            "PersistentCookieJar"          : "com.github.franmontiel:PersistentCookieJar:v1.0.1",
+            "eventbus"                     : "org.greenrobot:eventbus:3.1.1",
+            "xpopup"                       : "com.lxj:xpopup:2.0.6",
+            "swiperefreshlayout"           : "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0",
+            "appupdateX"                   : "com.azhon:appupdateX:3.0.0",
+            "permissionx"                  :'com.permissionx.guolindev:permissionx:1.2.2',
+    ]
+
+}

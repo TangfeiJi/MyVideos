@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_000"
+    android:orientation="vertical"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvRecomm"
+            style="@style/text_18_fff"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Recommend" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:id="@+id/tvNearby"
+            style="@style/text_18_fff"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="Nearby"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <com.asdcce.ddgfd.widget.CustomNoTouchViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.asdcce.ddgfd.widget.CustomNoTouchViewPager>
+</LinearLayout>

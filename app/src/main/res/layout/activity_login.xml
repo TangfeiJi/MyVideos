@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.classic.common.MultipleStatusView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/custom_multiple_status_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/logo" />
+
+        <TextView
+            style="@style/text_18_333"
+            android:layout_marginTop="10dp"
+            android:text="@string/app_name" />
+
+
+        <TextView
+            style="@style/text_18_333"
+            android:layout_width="match_parent"
+            android:layout_marginTop="50dp"
+            android:text="Input mobile phone number" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_bg_12ff6_90"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_mini" />
+
+            <TextView
+                android:id="@+id/tvCountry"
+                style="@style/text_14_333"
+                android:paddingLeft="15dp"
+                android:paddingRight="5dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="+91" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                style="@style/text_14_333"
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:hint="Pls input phone number"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+               />
+        </LinearLayout>
+
+
+        <TextView
+            style="@style/text_18_333"
+            android:layout_width="match_parent"
+            android:layout_marginTop="22dp"
+            android:text="Input verification code" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_bg_12ff6_90"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etCode"
+                style="@style/text_14_333"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="Input verification code"
+                android:inputType="number"
+                android:maxLength="6"
+                android:padding="15dp" />
+
+            <TextView
+                android:id="@+id/tvSend"
+                style="@style/text_12_fff"
+
+                android:layout_marginRight="5dp"
+                android:background="@drawable/shape_bg_ff6_90"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="30s" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvNext"
+            style="@style/text_next"
+            android:layout_marginTop="50dp"
+            android:text="Complete" />
+
+
+    </LinearLayout>
+
+
+</com.classic.common.MultipleStatusView>

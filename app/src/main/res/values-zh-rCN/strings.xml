@@ -1,0 +1,47 @@
+<!--
+  ~     (C) Copyright 2019, FlySky.
+  ~
+  ~     Licensed under the Apache License, Version 2.0 (the "License");
+  ~     you may not use this file except in compliance with the License.
+  ~     You may obtain a copy of the License at
+  ~
+  ~         http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~     Unless required by applicable law or agreed to in writing, software
+  ~     distributed under the License is distributed on an "AS IS" BASIS,
+  ~     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~     See the License for the specific language governing permissions and
+  ~     limitations under the License.
+  -->
+
+<resources>
+    <string name="app_name">Tata Tunai</string>
+    <!-- navigation -->
+
+    <!-- Search -->
+
+
+
+    <!-- Common -->
+    <string name="http_error">网络异常</string>
+    <string name="double_click_exit_toast">再按一次退出应用</string>
+    <string name="loading">加载中…</string>
+
+
+
+    <!--新增字符串-->
+    <string name="home">首页</string>
+    <string name="loan">借款</string>
+    <string name="mine">我的</string>
+
+
+    <string name="tenta">关于我们</string>
+    <string name="nilai">版本</string>
+    <string name="versi">版本号</string>
+
+    <!-- about -->
+
+
+
+
+</resources>
